@@ -6,4 +6,6 @@ Edit links in `_data/links.yml`; the homepage and redirect pages read from that 
 
 The homepage contains only centered LinkedIn and GitHub icons. Each link has a screen-reader label, a 48px click target, and a visible keyboard focus outline. The page follows the system's light or dark appearance and disables hover motion when reduced motion is enabled.
 
+The `/in/` and `/gh/` pages load the same stylesheet, so their backgrounds and text colors match the homepage's light or dark appearance during the immediate redirect.
+
 The local assets in `assets/icons/` are the official [LinkedIn in logo](https://brand.linkedin.com/downloads) and [GitHub Invertocat](https://brand.github.com/foundations/logo). The LinkedIn asset includes its registration mark; its width keeps the main square the same height as the GitHub icon.
