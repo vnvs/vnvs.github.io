@@ -1,8 +1,16 @@
 ---
 layout: default
 ---
-<ul>
-  {% for link in site.data.links %}
-    <li><a href="/{{ link.slug | escape }}/" rel="me">{{ link.label | escape }}</a></li>
-  {% endfor %}
-</ul>
+<main class="profile-page">
+  <nav aria-label="Social profiles">
+    <ul class="profile-links">
+      {% for link in site.data.links %}
+        <li>
+          <a href="{{ '/' | append: link.slug | append: '/' | relative_url }}" rel="me" aria-label="{{ link.label | escape }}">
+            <span class="profile-icon profile-icon--{{ link.key | escape }}" style="--icon-url: url('{{ link.icon | relative_url | escape }}')" aria-hidden="true"></span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</main>

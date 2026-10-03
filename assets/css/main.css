@@ -1,0 +1,83 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #000;
+}
+
+.profile-page {
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.profile-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-links a {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  color: inherit;
+  text-decoration: none;
+  transition: transform 150ms ease;
+}
+
+.profile-links a:hover {
+  transform: translateY(-2px);
+}
+
+.profile-links a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+
+.profile-icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background-color: currentColor;
+  -webkit-mask-image: var(--icon-url);
+  mask-image: var(--icon-url);
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+.profile-icon--linkedin {
+  width: 30.2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #141414;
+    color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-links a {
+    transition: none;
+  }
+
+  .profile-links a:hover {
+    transform: none;
+  }
+}
